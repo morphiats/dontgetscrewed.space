@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta 
+name="viewport" content="width=device-width, initial-scale=1.0" 
+/><title>The Build-Along 
+Workbook</title><style>:root{--bg:#0A0A0A;--leather:#100E0C;--panel:#141210;--panel-2:#1A1714;--line:#2A2317;--gold:#C8973A;--gold-hi:#E8C77A;--gold-lo:#8A6A22;--gold-dk:#5A4010;--cream:#E8E0D0;--cream-dim:#9A9384;--ok:#5E8C5A;--serif:Georgia,serif;--sans:-apple-system,sans-serif;--maxw:780px}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--serif);line-height:1.6}.wrap{max-width:var(--maxw);margin:0 
+auto;padding:0 
+22px}.topbar{position:sticky;top:0;background:var(--bg);border-bottom:1px 
+solid var(--line);padding:11px 0}.topbar 
+.wrap{display:flex;justify-content:space-between;align-items:center}.brand{font-family:var(--sans);color:var(--gold);letter-spacing:.1em;text-transform:uppercase;font-size:13px}.btn{background:transparent;border:1px 
+solid var(--gold-dk);color:var(--gold);padding:7px 
+13px;border-radius:3px;cursor:pointer}.hero{text-align:center;padding:50px 
+0 30px}.hero h1{font-size:38px}.hero 
+.glyphs{color:var(--gold)}.progress-card{background:var(--panel);border:1px 
+solid var(--line);border-radius:6px;padding:20px;margin:20px 
+0}.bar{height:9px;border-radius:6px;background:#241D12;border:1px solid 
+var(--gold-dk);overflow:hidden}.bar-fill{height:100%;width:0;background:var(--gold)}.chapter{border:1px 
+solid 
+var(--line);border-radius:6px;margin-bottom:14px;background:var(--panel)}.chapter.bonus{border-color:var(--gold-dk)}.ch-head{width:100%;text-align:left;background:transparent;border:none;padding:18px 
+20px;display:flex;gap:16px;color:var(--cream);cursor:pointer}.ch-num{font-family:var(--sans);font-size:11px;color:var(--gold);border:1px 
+solid var(--gold-dk);border-radius:3px;padding:5px 
+8px;min-width:54px;text-align:center}.ch-title{flex:1;font-size:18px;font-weight:600}.ch-sub{display:block;font-size:13px;color:var(--cream-dim);font-style:italic}.ch-body{display:none;padding:4px 
+20px 22px;border-top:1px solid var(--line)}.chapter.open 
+.ch-body{display:block}.field{margin:20px 
+0}.field-label{display:block;font-size:14px;color:var(--gold-hi);margin-bottom:7px;font-weight:600}.field-hint{font-size:12.5px;color:var(--cream-dim);margin-bottom:8px;font-style:italic}textarea{width:100%;background:var(--leather);border:1px 
+solid 
+var(--line);border-radius:4px;color:var(--cream);font-family:var(--serif);font-size:15px;padding:11px;min-height:80px}.section-eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-lo);margin:26px 
+0 4px;padding-bottom:6px;border-bottom:1px solid 
+var(--line)}.task{display:flex;gap:12px;padding:11px 0;border-bottom:1px 
+solid rgba(42,35,23,.6)}.task input{width:20px;height:20px}.task 
+label{font-size:14.5px;color:var(--cream)}.task 
+input:checked+label{color:var(--cream-dim);text-decoration:line-through}.pull{border-left:3px 
+solid var(--gold);background:var(--panel-2);padding:14px 18px;margin:22px 
+0;font-style:italic;color:var(--gold-hi)}footer{text-align:center;padding:48px 
+0;border-top:1px solid 
+var(--line);color:var(--cream-dim)}.site{font-family:var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}</style></head><body><div 
+class="topbar"><div class="wrap"><div class="brand">Don't Get 
+Screwed</div><button class="btn" 
+id="resetBtn">Reset</button></div></div><div class="wrap"><section 
+class="hero"><h1>How to Not Get <span class="glyphs">@#$%</span><br>in the 
+Music Business</h1><p>The Build-Along Workbook — your answers save 
+automatically.</p></section><div class="progress-card"><div 
+style="display:flex;justify-content:space-between"><b>Your 
+Progress</b><span id="progressCount">0 of 0</span></div><div 
+class="bar"><div class="bar-fill" id="barFill"></div></div></div><main 
+id="chapters"></main><footer><div 
+class="site">dontgetscrewed.space</div></footer></div><script>
+const CHAPTERS=[{id:"ch1",num:"Ch 1",title:"What Is Music 
+Publishing?",sub:"The foundation — where the money 
+hides",reflect:[{id:"c1r1",label:"What did you own before reading this — 
+and now?",hint:"Masters, compositions, both?"},{id:"c1r2",label:"Which 
+revenue stream were you missing?",hint:"Performance, mechanical, sync, 
+print."}],build:[{id:"c1b1",label:"List every song you've 
+released:",hint:"One per line."}],tasks:[{id:"c1t1",t:"Identify whether 
+you own your masters, publishing, or both"},{id:"c1t2",t:"Write down every 
+song you've released"},{id:"c1t3",t:"Note which songs are registered 
+anywhere"},{id:"c1t4",t:"Identify which songs are 
+unregistered"},{id:"c1t5",t:"Commit to building your publishing 
+infrastructure"}],quote:"Every unregistered song is an invoice you wrote 
+but never sent."},{id:"ch2",num:"Ch 2",title:"Copyrights, Branding & 
+Ownership",sub:"Where artists lose 
+everything",reflect:[{id:"c2r1",label:"Is your artist name clear to 
+use?",hint:"USPTO, streaming, socials, Google."},{id:"c2r2",label:"What's 
+your entity plan?",hint:"LLC, sole proprietor, 
+undecided."}],build:[{id:"c2b1",label:"Your publishing company 
+name:",hint:""},{id:"c2b2",label:"Collaborators you owe a split 
+sheet:",hint:""}],tasks:[{id:"c2t1",t:"Register songs with the Copyright 
+Office"},{id:"c2t2",t:"Search USPTO TESS database"},{id:"c2t3",t:"Search 
+streaming and social platforms"},{id:"c2t4",t:"File trademark if 
+clear"},{id:"c2t5",t:"Form an LLC or entity"},{id:"c2t6",t:"Register 
+publishing name with PRO"},{id:"c2t7",t:"Use a split sheet on every 
+song"}],quote:"Success attracts lawyers. Ownership is your 
+defense."},{id:"ch3",num:"Ch 3",title:"Performance Rights 
+Organizations",sub:"The money is collected whether you register or 
+not",reflect:[{id:"c3r1",label:"Which PRO did you choose?",hint:"ASCAP, 
+BMI, SESAC."},{id:"c3r2",label:"Writer AND publisher 
+account?",hint:"Missing publisher = 50% 
+lost."}],build:[{id:"c3b1",label:"Accounts created so far:",hint:"PRO, 
+SoundExchange, MLC."}],tasks:[{id:"c3t1",t:"Choose a PRO, create 
+songwriter account"},{id:"c3t2",t:"Register publishing 
+entity"},{id:"c3t3",t:"Register songs under both 
+accounts"},{id:"c3t4",t:"Register with 
+SoundExchange"},{id:"c3t5",t:"Register with the 
+MLC"},{id:"c3t6",t:"Confirm international collection"},{id:"c3t7",t:"Set 
+quarterly audit reminder"}],quote:"The worst choice is not 
+choosing."},{id:"ch4",num:"Ch 4",title:"Publishing 
+Administration",sub:"Paid to find money you already 
+earned",reflect:[{id:"c4r1",label:"Which administrator 
+fits?",hint:"Songtrust, CD Baby, Sentric…"},{id:"c4r2",label:"Admin vs. 
+publishing deal — explain 
+it.",hint:""}],build:[{id:"c4b1",label:"Questions before signing an admin 
+deal:",hint:"Term, %, reach, exit, audit."}],tasks:[{id:"c4t1",t:"Compare 
+administrators"},{id:"c4t2",t:"Select one, register 
+catalog"},{id:"c4t3",t:"Confirm PRO + MLC 
+registration"},{id:"c4t4",t:"Confirm international 
+scope"},{id:"c4t5",t:"Review term and exit"},{id:"c4t6",t:"Never sign 
+without an attorney"}],quote:"They don't own your songs. They work for 
+you."},{id:"ch5",num:"Ch 5",title:"Distribution Without Getting 
+Robbed",sub:"Keep what you earn",reflect:[{id:"c5r1",label:"Is your 
+agreement non-exclusive?",hint:""},{id:"c5r2",label:"Where was metadata 
+inconsistent?",hint:""}],build:[{id:"c5b1",label:"Your metadata 
+standard:",hint:""}],tasks:[{id:"c5t1",t:"Choose a 
+distributor"},{id:"c5t2",t:"Read the agreement"},{id:"c5t3",t:"Confirm 
+non-exclusive"},{id:"c5t4",t:"Create metadata 
+template"},{id:"c5t5",t:"Record ISRC/UPC"},{id:"c5t6",t:"Register ISRCs 
+with SoundExchange"},{id:"c5t7",t:"Activate Content 
+ID"},{id:"c5t8",t:"Submit for editorial playlists 
+early"}],quote:"Distribution is the starting gate, not the finish 
+line."},{id:"ch6",num:"Ch 6",title:"Sync Licensing",sub:"Into TV, film, 
+ads without a major publisher",reflect:[{id:"c6r1",label:"Which songs are 
+sync-ready?",hint:""},{id:"c6r2",label:"Draft your 
+pitch.",hint:""}],build:[{id:"c6b1",label:"Target supervisors / 
+libraries:",hint:""}],tasks:[{id:"c6t1",t:"Audit for uncleared 
+samples"},{id:"c6t2",t:"Create WAV/AIFF files"},{id:"c6t3",t:"Create 
+stems"},{id:"c6t4",t:"Build a catalog site"},{id:"c6t5",t:"Apply to sync 
+libraries"},{id:"c6t6",t:"Sign split sheets"},{id:"c6t7",t:"Draft a pitch 
+template"},{id:"c6t8",t:"Register with PRO before pitching"}],quote:"Sync 
+requires infrastructure, not a major publisher."},{id:"ch7",num:"Ch 
+7",title:"Producer, DJ & Sampling Guide",sub:"Clearance and the agreements 
+that protect you",reflect:[{id:"c7r1",label:"Any uncleared 
+samples?",hint:""},{id:"c7r2",label:"Lease or exclusive — what do you 
+own?",hint:""}],build:[{id:"c7b1",label:"Clearance issues to 
+resolve:",hint:""}],tasks:[{id:"c7t1",t:"Audit for uncleared 
+samples"},{id:"c7t2",t:"Clear or remove them"},{id:"c7t3",t:"Clear any 
+interpolations"},{id:"c7t4",t:"Use a split sheet 
+template"},{id:"c7t5",t:"Read every beat agreement"},{id:"c7t6",t:"Get 
+producer PRO info"},{id:"c7t7",t:"Review DJ catalog"}],quote:"A beat lease 
+gives permission to use, not ownership."},{id:"ch8",num:"Ch 8",title:"The 
+90-Day Music Business System",sub:"The framework that makes this 
+real",reflect:[{id:"c8r1",label:"Your start date and Day 90 
+goal?",hint:""},{id:"c8r2",label:"Which phase scares you 
+most?",hint:""}],build:[{id:"c8b1",label:"Quarterly audit 
+reminder:",hint:""}],tasks:[{id:"c8t1",t:"Days 1–30: catalog audit + 
+registrations"},{id:"c8t2",t:"Days 1–30: trademark, entity, PRO 
+accounts"},{id:"c8t3",t:"Days 31–60: MLC + 
+administrator"},{id:"c8t4",t:"Days 31–60: metadata audit + Content 
+ID"},{id:"c8t5",t:"Days 61–90: sync files, site, 
+pitches"},{id:"c8t6",t:"Days 61–90: build audit system"},{id:"c8t7",t:"Run 
+quarterly audits forever"}],quote:"This book is only worth what you do 
+with it."},{id:"b1",num:"Bonus",title:"Understanding 
+Contracts",bonus:true,sub:"Every clause, every 
+landmine",reflect:[{id:"b1r1",label:"Last thing you signed 
+unread?",hint:""},{id:"b1r2",label:"Red flags to watch 
+for:",hint:""}],build:[{id:"b1b1",label:"Contracts needing attorney 
+review:",hint:""}],tasks:[{id:"b1t1",t:"Read everything before 
+signing"},{id:"b1t2",t:"Identify the term"},{id:"b1t3",t:"Identify the 
+rights granted"},{id:"b1t4",t:"Challenge recoupable 
+expenses"},{id:"b1t5",t:"Calculate effective royalty 
+rate"},{id:"b1t6",t:"Confirm audit/reversion rights"},{id:"b1t7",t:"Never 
+sign without an attorney"}],quote:"No contract is final until you sign 
+it."},{id:"b2",num:"Bonus",title:"Taxes for Musicians",bonus:true,sub:"The 
+quarterly reality",reflect:[{id:"b2r1",label:"% you'll set aside for 
+taxes?",hint:""},{id:"b2r2",label:"Deductions you weren't 
+tracking?",hint:""}],build:[{id:"b2b1",label:"Expense categories to 
+track:",hint:""}],tasks:[{id:"b2t1",t:"Open a business bank 
+account"},{id:"b2t2",t:"Set aside 25–30% on 
+arrival"},{id:"b2t3",t:"Calendar quarterly deadlines"},{id:"b2t4",t:"Track 
+expenses monthly"},{id:"b2t5",t:"Keep digital 
+receipts"},{id:"b2t6",t:"Check home studio deduction"},{id:"b2t7",t:"Hire 
+an accountant"}],quote:"Earning it and keeping it are different 
+skills."}];
+const KEY="dgs_workbook_v1";let 
+state=JSON.parse(localStorage.getItem(KEY)||"{}");
+function save(){localStorage.setItem(KEY,JSON.stringify(state));}
+const el=document.getElementById('chapters');
+function render(){el.innerHTML='';CHAPTERS.forEach(ch=>{const 
+w=document.createElement('section');w.className='chapter'+(ch.bonus?' 
+bonus':'');w.dataset.id=ch.id;const 
+h=document.createElement('button');h.className='ch-head';h.innerHTML=`<span 
+class="ch-num">${ch.num}</span><span class="ch-title">${ch.title}<span 
+class="ch-sub">${ch.sub}</span></span>`;h.onclick=()=>w.classList.toggle('open');const 
+b=document.createElement('div');b.className='ch-body';let html='<div 
+class="section-eyebrow">Reflect</div>';ch.reflect.forEach(f=>html+=fld(f));html+='<div 
+class="section-eyebrow">Build</div>';ch.build.forEach(f=>html+=fld(f));html+='<div 
+class="section-eyebrow">Do</div>';ch.tasks.forEach(t=>{const 
+c=state[t.id]?'checked':'';html+=`<div class="task"><input type="checkbox" 
+id="${t.id}" ${c}><label 
+for="${t.id}">${t.t}</label></div>`;});if(ch.quote)html+=`<div 
+class="pull">"${ch.quote}"</div>`;b.innerHTML=html;w.append(h,b);el.appendChild(w);});bind();prog();}
+function fld(f){const v=state[f.id]||'';return `<div class="field"><label 
+class="field-label">${f.label}</label><div 
+class="field-hint">${f.hint}</div><textarea 
+id="${f.id}">${v}</textarea></div>`;}
+function 
+bind(){document.querySelectorAll('textarea').forEach(t=>t.oninput=()=>{state[t.id]=t.value;save();});document.querySelectorAll('input[type=checkbox]').forEach(c=>c.onchange=()=>{state[c.id]=c.checked;save();prog();});}
+function prog(){const all=CHAPTERS.flatMap(c=>c.tasks.map(t=>t.id));const 
+done=all.filter(id=>state[id]).length;document.getElementById('barFill').style.width=(done/all.length*100)+'%';document.getElementById('progressCount').textContent=`${done} 
+of ${all.length}`;}
+document.getElementById('resetBtn').onclick=()=>{if(confirm('Reset 
+everything?')){state={};save();render();}};
+render();
+</script></body></html>
+
+
