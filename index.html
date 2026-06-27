@@ -3,7 +3,7 @@ name="viewport" content="width=device-width, initial-scale=1.0"
 /><title>How to Not Get @#$% in the Music Business</title><meta 
 name="description" content="The complete guide to publishing, copyright, 
 royalties, distribution, sync, and owning what you create." /><style>
-:root{--bg:#0A0A0A;--leather:#100E0C;--panel:#141210;--panel-2:#1A1714;--line:#2A2317;--gold:#C8973A;--gold-hi:#E8C77A;--gold-lo:#8A6A22;--gold-dk:#5A4010;--cream:#E8E0D0;--cream-dim:#9A9384;--serif:Georgia,serif;--sans:-apple-system,sans-serif}
+:root{--bg:#0A0A0A;--leather:#100E0C;--panel:#141210;--panel-2:#1A1714;--line:#2A2317;--gold:#C8973A;--gold-hi:#E8C77A;--gold-lo:#8A6A22;--gold-dk:#5A4010;--cream:#E8E0D0;--cream-dim:#9A9384;--serif:'Book Antiqua','Palatino Linotype',Georgia,serif;--sans:'Segoe UI',Tahoma,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--cream);font-family:var(--serif);line-height:1.65}
 .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
@@ -28,40 +28,7 @@ h1{font-size:46px;line-height:1.05;font-weight:700;margin-bottom:8px}
 30px;max-width:440px}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
 .btn-primary{background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#1A1206;font-family:var(--sans);font-weight:600;font-size:15px;padding:14px 
-26px;border:none;border-radius:4px;text-decoration:none;display:inline-block}
-.btn-ghost{font-family:var(--sans);font-size:14px;color:var(--gold);text-decoration:none;border:1px 
-solid var(--gold-dk);padding:13px 22px;border-radius:4px}
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta 
-name="viewport" content="width=device-width, initial-scale=1.0" 
-/><title>How to Not Get @#$% in the Music Business</title><meta 
-name="description" content="The complete guide to publishing, copyright, 
-royalties, distribution, sync, and owning what you create." /><style>
-:root{--bg:#0A0A0A;--leather:#100E0C;--panel:#141210;--panel-2:#1A1714;--line:#2A2317;--gold:#C8973A;--gold-hi:#E8C77A;--gold-lo:#8A6A22;--gold-dk:#5A4010;--cream:#E8E0D0;--cream-dim:#9A9384;--serif:Georgia,serif;--sans:-apple-system,sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--cream);font-family:var(--serif);line-height:1.65}
-.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
-nav{position:sticky;top:0;background:rgba(10,10,10,.95);border-bottom:1px 
-solid var(--line);z-index:50}
-nav 
-.wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 
-24px}
-.logo{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
-.logo b{color:var(--gold-hi)}
-.nav-cta{font-family:var(--sans);border:1px solid 
-var(--gold-dk);color:var(--gold);padding:7px 
-15px;border-radius:3px;text-decoration:none;font-size:13px}
-.hero{padding:70px 0 50px;display:grid;grid-template-columns:1fr 
-1fr;gap:54px;align-items:center}
-.eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.hero 
-h1{font-size:46px;line-height:1.05;font-weight:700;margin-bottom:8px}
-.hero h1 .g{color:var(--gold)}
-.hero 
-.sub{font-size:18px;color:var(--cream-dim);font-style:italic;margin:18px 0 
-30px;max-width:440px}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#1A1206;font-family:var(--sans);font-weight:600;font-size:15px;padding:14px 
-26px;border:none;border-radius:4px;text-decoration:none;display:inline-block}
+26px;border:none;border-radius:4px;text-decoration:none;display:inline-block;cursor:pointer}
 .btn-ghost{font-family:var(--sans);font-size:14px;color:var(--gold);text-decoration:none;border:1px 
 solid var(--gold-dk);padding:13px 22px;border-radius:4px}
 .cover-box{background:var(--panel);border:2px solid 
@@ -208,20 +175,11 @@ view to every chapter.</p></div>
 </div></section>
 <section class="block wrap" id="get"><div class="capture"><h2>Get the 
 book. Keep what you create.</h2><p>Drop your email and we'll send you the 
-book and the free workbook.</p><form class="email-form" onsubmit="return 
-handleSignup(event)"><input type="email" id="email" 
+book and the free workbook.</p><form class="email-form" action="https://formspree.io/f/xaqgoaop" method="POST"><input type="email" name="email" 
 placeholder="your@email.com" required /><button type="submit" 
 class="btn-primary">Send It To Me</button></form><p class="fine" 
 id="formNote">Own. Protect. Collect.</p></div></section>
 <footer><div class="wrap"><div class="site">dontgetscrewed.space</div><p 
 class="fine">© How to Not Get @#$% in the Music Business. Educational 
 resource, not legal, tax, or financial advice.</p></div></footer>
-<script>
-function handleSignup(e){e.preventDefault();var 
-email=document.getElementById('email').value.trim();var 
-note=document.getElementById('formNote');if(!email||email.indexOf('@')<1){note.textContent="Enter 
-a valid email address.";return 
-false;}try{localStorage.setItem('dgs_signup_email',email);}catch(err){}note.innerHTML="You're 
-on the list.";return false;}
-</script>
 </body></html>
